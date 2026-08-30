@@ -1,8 +1,10 @@
-﻿class Program
+﻿using Orca.Kernel;
+
+class Program
 {
     public static int Main()
     {
-        Orca.Kernel.Orca.Entry();
+        OrcaKernel.Entry();
         return 0;
     }
 }

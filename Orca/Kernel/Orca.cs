@@ -3,7 +3,7 @@ using Orca.Shell;
 
 namespace Orca.Kernel
 {
-    static class Orca
+    static class OrcaKernel
     {
         public static void Entry()
         {
