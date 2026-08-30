@@ -13,6 +13,7 @@
         Orca.CommandType type = args switch
         {
             "help" => Orca.CommandType.HELP,
+            "wipe" => Orca.CommandType.WIPE,
             _ => Orca.CommandType.UNKNOWN
         };
         switch (type)
