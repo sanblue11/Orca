@@ -14,15 +14,15 @@
                 """);
                 return;
             }
-            Orca.CommandType type = args switch
+            OrcaKernel.CommandType type = args switch
             {
-                "help" => Orca.CommandType.HELP,
-                "wipe" => Orca.CommandType.WIPE,
-                _ => Orca.CommandType.UNKNOWN
+                "help" => OrcaKernel.CommandType.HELP,
+                "wipe" => OrcaKernel.CommandType.WIPE,
+                _ => OrcaKernel.CommandType.UNKNOWN
             };
             switch (type)
             {
-                case Orca.CommandType.HELP:
+                case OrcaKernel.CommandType.HELP:
                     Console.WriteLine("""
                     -HELP-  Show help on Orca commands.
 
@@ -30,14 +30,14 @@
                     Usage2: help <Command>
                     """);
                     break;
-                case Orca.CommandType.WIPE:
+                case OrcaKernel.CommandType.WIPE:
                     Console.WriteLine("""
                     -WIPE-  Wipe the screen.
 
                     Usage:  wipe
                     """);
                     break;
-                case Orca.CommandType.UNKNOWN:
+                case OrcaKernel.CommandType.UNKNOWN:
                     Console.WriteLine($"[Orca] Unknown Command -> '{args}'");
                     break;
             }
