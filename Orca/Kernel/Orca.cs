@@ -1,4 +1,5 @@
-﻿using Orca.Shell;
+﻿using Orca.AAS;
+using Orca.Shell;
 
 namespace Orca.Kernel
 {
@@ -6,6 +7,9 @@ namespace Orca.Kernel
     {
         public static void Entry()
         {
+            OrcaAAS.RenewCurrentDrive();
+            OrcaAAS.RenewCurrentPath();
+
             Console.WriteLine("Orca Kernel [Version 0.0.1]\n");
             while (true)
             {
@@ -47,6 +51,7 @@ namespace Orca.Kernel
                     Console.WriteLine($"[Orca] Unknown Command -> '{tokens[0]}'");
                     break;
             }
+            Console.WriteLine();
         }
 
         public enum CommandType
