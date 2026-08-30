@@ -9,4 +9,10 @@
     <InvariantGlobalization>true</InvariantGlobalization>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="DISK\**" />
+    <EmbeddedResource Remove="DISK\**" />
+    <None Remove="DISK\**" />
+  </ItemGroup>
+
 </Project>

@@ -7,8 +7,7 @@ namespace Orca.Kernel
     {
         public static void Entry()
         {
-            OrcaAAS.RenewCurrentDrive();
-            OrcaAAS.RenewCurrentPath();
+            OrcaAAS.Entry();
 
             Console.WriteLine("Orca Kernel [Version 0.0.1]\n");
             while (true)
