@@ -5,8 +5,10 @@
         if (args == null)
         {
             Console.WriteLine("""
+                -HELP-  Show help on Orca commands.
+                -WIPE-  Wipe the screen.
+
                 For more information, type 'help <command>'.
-                wipe    Wipe the screen.
                 """);
             return;
         }
@@ -20,15 +22,15 @@
         {
             case Orca.CommandType.HELP:
                 Console.WriteLine("""
-                    HELP    Show help on Orca commands.
+                    -HELP-  Show help on Orca commands.
 
-                    Usage1:  help
-                    Usage2:  help <Command>
+                    Usage1: help
+                    Usage2: help <Command>
                     """);
                 break;
             case Orca.CommandType.WIPE:
                 Console.WriteLine("""
-                    WIPE    Wipe the screen.
+                    -WIPE-  Wipe the screen.
 
                     Usage:  wipe
                     """);
