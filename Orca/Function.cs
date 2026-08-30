@@ -20,17 +20,17 @@
         {
             case Orca.CommandType.HELP:
                 Console.WriteLine("""
-                    Show help on Orca commands.
+                    HELP    Show help on Orca commands.
 
-                    help <Command>
-                        <Command>   Show help information for the command.
+                    Usage1:  help
+                    Usage2:  help <Command>
                     """);
                 break;
             case Orca.CommandType.WIPE:
                 Console.WriteLine("""
-                    Wipe the screen.
+                    WIPE    Wipe the screen.
 
-                    wipe
+                    Usage:  wipe
                     """);
                 break;
             case Orca.CommandType.UNKNOWN:
