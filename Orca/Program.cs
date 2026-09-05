@@ -1,10 +1,10 @@
-﻿using Orca.Kernel;
+﻿using Orca.System;
 
 class Program
 {
     public static int Main()
     {
-        OrcaKernel.Entry();
+        Kernel.Entry();
         return 0;
     }
 }

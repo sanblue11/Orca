@@ -1,6 +1,6 @@
-﻿namespace Orca.Kernel
+﻿namespace Orca.System
 {
-    static class Function
+    internal static class Function
     {
         public static void FN_help(string? args)
         {
@@ -14,15 +14,15 @@
                 """);
                 return;
             }
-            OrcaKernel.CommandType type = args switch
+            Command type = args switch
             {
-                "help" => OrcaKernel.CommandType.HELP,
-                "wipe" => OrcaKernel.CommandType.WIPE,
-                _ => OrcaKernel.CommandType.UNKNOWN
+                "help" => Command.HELP,
+                "wipe" => Command.WIPE,
+                _ => Command.UNKNOWN
             };
             switch (type)
             {
-                case OrcaKernel.CommandType.HELP:
+                case Command.HELP:
                     Console.WriteLine("""
                     -HELP-  Show help on Orca commands.
 
@@ -30,18 +30,19 @@
                     Usage2: help <Command>
                     """);
                     break;
-                case OrcaKernel.CommandType.WIPE:
+                case Command.WIPE:
                     Console.WriteLine("""
                     -WIPE-  Wipe the screen.
 
                     Usage:  wipe
                     """);
                     break;
-                case OrcaKernel.CommandType.UNKNOWN:
+                case Command.UNKNOWN:
                     Console.WriteLine($"[Orca] Unknown Command -> '{args}'");
                     break;
             }
         }
+
         public static void FN_wipe()
         {
             Console.Clear();
